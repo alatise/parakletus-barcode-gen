@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="flex flex-col gap-5 py-20 justify-center items-center px-4">
       <main className="flex flex-col gap-4 bg-white p-10 rounded-3xl">
-        <p className="text-4xl">Barcode Generator</p>
+        <p className="text-xl md:text-4xl text-center">Barcode Generator</p>
         <Input
           value={isbn}
           onChange={handleInputChange}
