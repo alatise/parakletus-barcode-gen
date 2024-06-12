@@ -35,8 +35,8 @@ function App() {
       const imgWidth = canvas.width;
       const imgHeight = canvas.height;
       const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-      const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = 10;
+      const imgX = (pdfWidth - imgWidth * ratio) / 4;
+      const imgY = 5;
       pdf.addImage(
         imgData,
         "PNG",
@@ -64,7 +64,7 @@ function App() {
             <div className="font-bold text-lg mb-1">
               <span>{formatIsbn(isbn)}</span>
             </div>
-            <div className="relative inline-block bg-white">
+            <div className="relative inline-block bg-white barcode-wrapper">
               <Barcode
                 value={isbn}
                 displayValue={false}
@@ -72,7 +72,7 @@ function App() {
                 width={1.8}
                 margin={0}
               />
-              <div className="absolute bottom-[-30px] left-0 right-0 flex  text-2xl font-semibold bg-white">
+              <div className=" flex  text-2xl font-semibold bg-white -mt-4 ">
                 <span style={{ marginLeft: -20 }}>{isbn[0]}</span>
                 <span style={{ marginLeft: "10%" }}>{isbn.slice(1, 7)}</span>
                 <span style={{ marginLeft: "15%" }}>{isbn.slice(7)}</span>
@@ -82,7 +82,7 @@ function App() {
                   style={{
                     position: "absolute",
                     top: "0",
-                    bottom: "-10px",
+                    bottom: "5px",
                     left: "0",
                     borderLeft: "2px solid black",
                   }}
@@ -91,7 +91,7 @@ function App() {
                   style={{
                     position: "absolute",
                     top: "0",
-                    bottom: "-10px",
+                    bottom: "5px",
                     left: "2%",
                     borderLeft: "2px solid black",
                   }}
@@ -100,7 +100,7 @@ function App() {
                   style={{
                     position: "absolute",
                     top: "0",
-                    bottom: "-10px",
+                    bottom: "5px",
                     left: "49%",
                     borderLeft: "2px solid black",
                   }}
@@ -109,7 +109,7 @@ function App() {
                   style={{
                     position: "absolute",
                     top: "0",
-                    bottom: "-10px",
+                    bottom: "5px",
                     left: "51%",
                     borderLeft: "2px solid black",
                   }}
@@ -118,7 +118,7 @@ function App() {
                   style={{
                     position: "absolute",
                     top: "0",
-                    bottom: "-10px",
+                    bottom: "5px",
                     left: "98%",
                     borderLeft: "2px solid black",
                   }}
@@ -127,7 +127,7 @@ function App() {
                   style={{
                     position: "absolute",
                     top: "0",
-                    bottom: "-10px",
+                    bottom: "5px",
                     left: "100%",
                     borderLeft: "2px solid black",
                   }}
